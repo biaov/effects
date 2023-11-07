@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+img {
+  display: block;
+  &[mode='cover'] {
+    object-fit: cover;
+  }
+}
+
+@rect: {
+  fill: 100%;
+};
+each(@rect,{
+  .w-@{key}{
+    width: @value;
+  }
+  .h-@{key}{
+    height: @value;
+  }
+});
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: lighten(#409eff, 20%);
+}
