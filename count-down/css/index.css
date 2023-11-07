@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(#fff 5%, #a8acaf);
+  padding-top: 30vh;
+}
+
+.countdownHolder {
+  width: 450px;
+  margin: 0 auto;
+  font: 40px/1.5 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  letter-spacing: -3px;
+}
+
+.position {
+  display: inline-block;
+  height: 1.6em;
+  overflow: hidden;
+  position: relative;
+  width: 1.05em;
+}
+
+.digit {
+  position: absolute;
+  display: block;
+  width: 1em;
+  background-color: #444;
+  border-radius: 0.2em;
+  text-align: center;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.digit.static {
+  box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.35);
+  background-image: linear-gradient(bottom, #3a3a3a 50%, #444444 50%);
+}
+
+.count-div {
+  display: inline-block;
+  width: 16px;
+  height: 1.6em;
+  position: relative;
+}
+
+.count-div:before,
+.count-div:after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #444;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -3px;
+  top: 0.5em;
+  box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.5);
+  content: '';
+}
+
+.count-div:after {
+  top: 0.9em;
+}
+
+.custom-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+.custom-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  border-radius: 20px;
+  padding: 40px;
+  background: #fff;
+  box-sizing: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.modal .tips {
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+.modal .input {
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-bottom: 80px;
+  color: #333;
+  outline: none;
+}
+.modal .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal .btns > div {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.28s ease;
+}
+.modal .btns .btn-cancel {
+  margin-right: 20px;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.45);
+}
+.modal .btns .btn-cancel:hover {
+  border-color: #333;
+  color: #333;
+}
+.modal .btns .btn-sure {
+  background: #333;
+  color: #fff;
+}
+
+.modal .btns .btn-sure:hover {
+  background: #000;
+}
