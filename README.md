@@ -9,7 +9,9 @@
 
 ## 特效列表
 
-- [倒计时](http://effects.biaov.cn/pools/count-down/index.html)
+- [倒计时](http://effects.biaov.cn/pools/count-down)
+- [鼠标圆球](http://effects.biaov.cn/pools/canvas-ball)
+- [背景粒子](http://effects.biaov.cn/pools/bg-particle)
 
 ## 技术栈
 
