@@ -1,30 +1,11 @@
 <script setup lang="ts">
-import { linkPrefixURL } from '@/config'
-import countdown from '@/assets/count-down.png'
-import type { ListItem } from './types'
+import { useViewList } from './hook'
 
-/**
- * 列表数据
- */
-const listData: ListItem[] = [
-  {
-    title: '倒计时',
-    stack: 'HTML5 + CSS3 + JavaScript + jQuery',
-    createDate: '2023-11-07',
-    coverUrl: countdown,
-    link: 'count-down'
-  }
-].map(item => ({
-  ...item,
-  link: linkPrefixURL + item.link
-}))
+defineOptions({
+  name: 'ViewList'
+})
 
-/**
- * 跳转到详情页
- */
-const onNavTo = (item: ListItem) => {
-  window.open(item.link, '_blank')
-}
+const { listData, onNavTo } = useViewList()
 </script>
 
 <template>
@@ -36,8 +17,10 @@ const onNavTo = (item: ListItem) => {
         </div>
         <div class="text">
           <div class="title">{{ item.title }}</div>
-          <div class="stack">{{ item.stack }}</div>
-          <div class="date">{{ item.createDate }}</div>
+          <div class="stack">
+            <span v-for="(tag, i) in item.tags" :key="i">{{ tag }}</span>
+          </div>
+          <div class="date">创建时间：{{ item.createDate }}</div>
         </div>
       </div>
     </div>
@@ -46,9 +29,12 @@ const onNavTo = (item: ListItem) => {
 
 <style scoped lang="less">
 .wrap {
+  position: relative;
+  z-index: 2;
   width: 1200px;
   padding: 40px 0;
   margin: 0 auto;
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -81,8 +67,22 @@ const onNavTo = (item: ListItem) => {
           font-size: 16px;
         }
         .stack {
-          color: rgba(0, 0, 0, 0.65);
+          color: #fff;
           margin-bottom: 10px;
+          display: inline-flex;
+          flex-wrap: wrap;
+          span {
+            margin-right: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #f0f0f0;
+            @bgcs: #1677ff, #eb2f96, #13c2c2, #722ed1, #52c41a, #fa8c16;
+            each(@bgcs,{
+              &:nth-child(@{index}){
+                background: @value;
+              }
+            });
+          }
         }
       }
     }

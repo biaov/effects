@@ -7,9 +7,9 @@ export interface ListItem {
    */
   title: string
   /**
-   * 技术栈
+   * 技术栈标签
    */
-  stack: string
+  tags: string[]
   /**
    * 创建时间
    */

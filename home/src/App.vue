@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ViewList from './components/ViewList.vue'
+import ViewList from '@/components/view-list'
 </script>
 
 <template>
