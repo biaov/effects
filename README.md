@@ -30,4 +30,3 @@
 ## 贡献者们
 
 [![贡献者们](https://contrib.rocks/image?repo=biaov/effects)](https://github.com/biaov/effects/graphs/contributors)
-
