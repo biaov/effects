@@ -5,9 +5,9 @@ defineOptions({
 
 const random = (min: number, max: number) => ~~(Math.random() * (max - min + 1) + min)
 
-const list = Array.from({ length: 100 }, (_, i) => ({
+const list = Array.from({ length: 200 }, (_, i) => ({
   delay: `-${19973 + i * 200}ms`,
-  duration: 10000,
+  duration: 7000 + i * 10,
   left: `${200 + random(0, 100)}`,
   background: `rgba(${random(50, 255)},${random(50, 255)},${random(50, 255)})`
 }))
