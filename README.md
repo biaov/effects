@@ -1,10 +1,10 @@
 # effects
 
-特效集合，集合一些有意思的特效😆
+特效集合，集合一些有意思的特效 😆
 
 <h2 align="center">
-    <a href="http://effects.biaov.cn/"><img src="https://img.shields.io/badge/npm-1.1.0-blue" /></a>
-    <a href="https://github.com/biaov/effects/blob/main/LICENSE"><img src="https://img.shields.io/github/license/biaov/effects.svg" /></a>
+    <a href="http://effects.biaov.cn/"><img src="https://img.shields.io/badge/npm-1.2.0-blue" alt="effects" /></a>
+    <a href="https://github.com/biaov/effects/blob/main/LICENSE"><img src="https://img.shields.io/github/license/biaov/effects.svg" alt="LICENSE" /></a>
 </h2>
 
 ## 特效列表
@@ -15,7 +15,7 @@
 
 ## 技术栈
 
-- `HTML5` + `CSS3` + `JavaScript` + `jQuery`
+- `HTML5` + `CSS3` + `JavaScript` + `jQuery` + `Vite` + `Vue3.x` + `TypeScript`
 
 ## 目录解析
 
