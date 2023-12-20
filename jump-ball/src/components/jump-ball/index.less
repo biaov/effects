@@ -48,6 +48,7 @@
   background: linear-gradient(0deg, #555555 0%, white 100%);
   border-radius: 100%;
   transform: translate(-50%, -50%);
+
   &::before {
     content: '';
     position: absolute;
@@ -73,7 +74,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     &::before {
-      background: linear-gradient(0deg, rgba(174, 169, 192, 0) 50%, rgba(174, 169, 192, 0.3) 100%);
+      background: var(--before-bg);
       animation: amplitudeShadow 1000ms var(--delay) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
     }
   }
