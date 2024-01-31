@@ -32,6 +32,14 @@ const { listData, onNavTo } = useViewList()
 </template>
 
 <style scoped lang="less">
+@keyframes floating {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
 .wrap {
   position: relative;
   z-index: 2;
@@ -72,10 +80,10 @@ const { listData, onNavTo } = useViewList()
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       background: #fff;
       transition: all 0.3s ease;
+      animation: floating ease-in-out 1.6s infinite alternate;
       cursor: pointer;
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       }
       .img {
         height: 300px;
