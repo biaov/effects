@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.u-version {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.m-main {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center center;
+  overflow: hidden;
+  --perspective: 100px;
+  -webkit-perspective: var(--perspective);
+  perspective: var(--perspective);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.m-main:after {
+  display: block;
+  content: '';
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  background-image: -o-linear-gradient(45deg, blue, transparent, yellow), -o-linear-gradient(left, #008aff, transparent, #e10019), -o-linear-gradient(top, green, cyan, purple);
+  background-image: linear-gradient(45deg, blue, transparent, yellow), linear-gradient(to right, #008aff, transparent, #e10019), linear-gradient(to bottom, green, cyan, purple);
+  mix-blend-mode: overlay;
+}
+.m-main time {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  width: 100px;
+  height: 100px;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  will-change: transform;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0.5rem white, 0 0 1rem white;
+  box-shadow: 0 0 0.5rem white, 0 0 1rem white;
+}
+@supports (transition: all) {
+  .m-main time {
+    -webkit-box-shadow: 0 0 0.5rem white;
+    box-shadow: 0 0 0.5rem white;
+  }
+}

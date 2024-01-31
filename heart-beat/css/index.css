@@ -1,0 +1,59 @@
+body {
+  background: black;
+}
+
+.heart {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  animation: shake 0.8s infinite forwards;
+}
+
+.heart div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: shadow 0.8s infinite forwards;
+  background: pink;
+}
+
+.topLeft,
+.topRight {
+  border-radius: 100px 100px 0 0;
+}
+
+.topLeft {
+  transform: translate(-50px, 0) rotate(-45deg);
+}
+
+.topRight {
+  transform: translate(50px, 0) rotate(45deg);
+}
+
+.bottom {
+  transform: translate(0, 64px) rotate(45deg) scale(0.9, 0.9);
+}
+
+/* 定义动画 */
+
+@keyframes shake {
+  from {
+    transform: scale(0.8, 0.8);
+  }
+
+  to {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@keyframes shadow {
+  from {
+  }
+
+  to {
+    box-shadow: 0px 0px 50px pink;
+  }
+}
