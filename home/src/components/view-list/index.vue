@@ -10,6 +10,10 @@ const { listData, onNavTo } = useViewList()
 
 <template>
   <div class="wrap">
+    <view class="header">
+      <div class="title">特效集锦</div>
+      <a target="_blank" href="https://github.com/biaov/effects" title="访问源码"><img src="@/assets/github.svg" alt="github" class="github" /></a>
+    </view>
     <div class="container">
       <div v-for="(item, index) in listData" :key="index" class="item" @click="onNavTo(item)">
         <div class="img w-fill">
@@ -34,13 +38,35 @@ const { listData, onNavTo } = useViewList()
   width: 1200px;
   padding: 40px 0;
   margin: 0 auto;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .github {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      transform: scale(0.9);
+      opacity: 0.8;
+      transition: all 0.3s ease;
+      cursor: pointer;
 
+      &:hover {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+  }
   .container {
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% + 60px);
+    width: calc(100% + 20px);
     .item {
-      width: 400px;
+      width: 386px;
       margin: 0 20px 20px 0;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
