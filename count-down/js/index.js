@@ -109,6 +109,7 @@ $(function () {
   const $countdown = $('#countdown')
   $countdown.countdown({ timestamp })
   const $mask = $('.mask')
+  $label = $('.label-time')
 
   $('.custom-btn').on('click', () => {
     $mask.fadeIn()
@@ -116,6 +117,7 @@ $(function () {
   $mask.on('click', () => {
     $mask.fadeOut()
   })
+
   $mask.find('.modal').on('click', e => {
     e.stopPropagation()
     $this = $(e.target)
@@ -124,6 +126,7 @@ $(function () {
     } else if ($this.hasClass('btn-sure')) {
       const $input = $mask.find('.input').val()
       if ($input) {
+        $label.html($input)
         const timestamp = new Date($input)
         $countdown.children().remove()
         $countdown.countdown({ timestamp })
