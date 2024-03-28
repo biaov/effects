@@ -3,7 +3,7 @@
 特效集合，集合一些有意思的特效 😆
 
 <h2 align="center">
-    <a href="http://effects.biaov.cn/"><img src="https://shields.io/github/v/release/biaov/effects.svg?logo=github&label=版本" alt="effects" /></a>
+    <a href="http://effects.biaov.cn/"><img src="https://shields.io/github/v/release/biaov/effects.svg?logo=github&label=version" alt="effects" /></a>
     <a href="https://github.com/biaov/effects/blob/main/LICENSE"><img src="https://img.shields.io/github/license/biaov/effects.svg" alt="license" /></a>
 </h2>
 
