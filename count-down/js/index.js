@@ -118,7 +118,9 @@ $(function () {
   $countdown.countdown({ timestamp })
   const $mask = $('.mask')
   $label = $('.label-time')
-  $label.html(`${y}-${addZero(timestamp.getMonth() + 1)}-${addZero(timestamp.getDate())}`)
+  const label = `${y}-${addZero(timestamp.getMonth() + 1)}-${addZero(timestamp.getDate())}`
+  $label.html(label)
+  $mask.find('.input').attr('placeholder', `请输入终点时间，例如：${label}`)
 
   $('.custom-btn').on('click', () => {
     $mask.fadeIn()
