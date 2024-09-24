@@ -52,7 +52,7 @@
     return this
   }
 
-  function init(elem) {
+  function init(elem, options) {
     elem.addClass('countdownHolder')
 
     $.each(['Days', 'Hours', 'Minutes', 'Seconds'], function (i) {
@@ -71,6 +71,11 @@
         elem.append('<span class="count-div count-div' + i + '"></span>')
       }
     })
+    let diff = ~~((options.timestamp - new Date()) / 1000)
+    diff < 0 && (diff = 0)
+    if (~~(diff / days) > 99) {
+      $(elem).prepend(`<span class="placeholder-parent"><span class="placeholder">1</span></span>`)
+    }
   }
 
   function switchDigit(position, number) {
@@ -81,7 +86,6 @@
     if (position.data('digit') == number) return false
 
     position.data('digit', number)
-
     var replacement = $('<span>', {
       class: 'digit',
       css: {
@@ -104,12 +108,17 @@
   }
 })($)
 
+const addZero = v => (v < 10 ? `0${v}` : v)
+
 $(function () {
-  const timestamp = new Date('2024-02-10')
+  // const timestamp = new Date('2025-01-29')
+  const y = new Date().getFullYear() + 1
+  const timestamp = chineseLunar.lunarToSolar(y, 1, 1)
   const $countdown = $('#countdown')
   $countdown.countdown({ timestamp })
   const $mask = $('.mask')
   $label = $('.label-time')
+  $label.html(`${y}-${addZero(timestamp.getMonth() + 1)}-${addZero(timestamp.getDate())}`)
 
   $('.custom-btn').on('click', () => {
     $mask.fadeIn()

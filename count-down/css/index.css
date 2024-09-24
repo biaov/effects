@@ -27,7 +27,7 @@ body {
   margin: 0 10px;
 }
 .countdownHolder {
-  width: 450px;
+  min-width: 450px;
   margin: 0 auto;
   font: 40px/1.5 'Open Sans Condensed', sans-serif;
   text-align: center;
@@ -42,6 +42,7 @@ body {
   width: 1.05em;
 }
 
+.placeholder,
 .digit {
   position: absolute;
   display: block;
@@ -53,9 +54,35 @@ body {
   letter-spacing: -1px;
 }
 
+.placeholder,
 .digit.static {
   box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.35);
-  background-image: linear-gradient(bottom, #3a3a3a 50%, #444444 50%);
+  background-image: linear-gradient(0deg, #3a3a3a 50%, #444444 50%);
+}
+
+@keyframes translate {
+  0% {
+    transform: translateY(-2.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.placeholder {
+  position: relative;
+  display: inline-block;
+  animation: translate 0.28s ease-out;
+}
+.placeholder-parent {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 12px;
+  height: 1.6em;
+  overflow: hidden;
+  position: relative;
 }
 
 .count-div {
