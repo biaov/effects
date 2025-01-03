@@ -111,9 +111,14 @@
 const addZero = v => (v < 10 ? `0${v}` : v)
 
 $(function () {
-  // const timestamp = new Date('2025-01-29')
-  const y = new Date().getFullYear() + 1
-  const timestamp = chineseLunar.lunarToSolar(y, 1, 1)
+  // const now = new Date()
+  const now = new Date()
+  let y = now.getFullYear()
+  let timestamp = chineseLunar.lunarToSolar(y, 1, 1)
+  if (now > +new Date(timestamp)) {
+    y++
+    timestamp = chineseLunar.lunarToSolar(y, 1, 1)
+  }
   const $countdown = $('#countdown')
   $countdown.countdown({ timestamp })
   const $mask = $('.mask')
