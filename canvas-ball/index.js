@@ -169,6 +169,10 @@ const useCircelBall = (option = {}) => {
       const { offsetX, offsetY } = ev || window.event
       ballArr.push(new MoveBall(offsetX, offsetY))
     })
+    canvas.addEventListener('touchmove', ev => {
+      const { clientX, clientY } = ev.changedTouches[0]
+      ballArr.push(new MoveBall(clientX, clientY))
+    })
 
     /**
      * 定时执行绘制
