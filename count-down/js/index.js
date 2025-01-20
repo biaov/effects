@@ -53,7 +53,7 @@
   }
 
   function init(elem, options) {
-    elem.addClass('countdownHolder')
+    elem.addClass('countdown-holder')
 
     $.each(['Days', 'Hours', 'Minutes', 'Seconds'], function (i) {
       $('<span class="count' + this + '">')
@@ -123,6 +123,7 @@ $(function () {
   $countdown.countdown({ timestamp })
   const $mask = $('.mask')
   $label = $('.label-time')
+  $labelSpring = $('.label-spring')
   const label = `${y}-${addZero(timestamp.getMonth() + 1)}-${addZero(timestamp.getDate())}`
   $label.html(label)
   $mask.find('.input').attr('placeholder', `请输入终点时间，例如：${label}`)
@@ -143,6 +144,7 @@ $(function () {
       const $input = $mask.find('.input').val()
       if ($input) {
         $label.html($input)
+        $labelSpring.hide()
         const timestamp = new Date($input)
         $countdown.children().remove()
         $countdown.countdown({ timestamp })

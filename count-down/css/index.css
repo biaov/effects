@@ -26,8 +26,7 @@ body {
   display: block;
   margin: 0 10px;
 }
-.countdownHolder {
-  min-width: 450px;
+.countdown-holder {
   margin: 0 auto;
   font: 40px/1.5 'Open Sans Condensed', sans-serif;
   text-align: center;
@@ -200,4 +199,36 @@ body {
 
 .modal .btns .btn-sure:hover {
   background: #000;
+}
+
+@media (max-width: 800px) {
+  .label {
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+  .countdown-holder {
+    font-size: 22px;
+  }
+  .custom-btn {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .modal {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .modal .tips {
+    margin-bottom: 20px;
+  }
+  .modal .input {
+    margin-bottom: 40px;
+  }
+  .modal .btns {
+    justify-content: space-between;
+  }
+  .modal .btns > div {
+    width: 48%;
+  }
 }
