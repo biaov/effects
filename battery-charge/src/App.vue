@@ -21,5 +21,6 @@ import BatteryCharge from './components/battery-charge'
   left: 0;
   width: 100%;
   height: 100%;
+  background: #000;
 }
 </style>

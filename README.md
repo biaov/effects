@@ -7,6 +7,10 @@
     <a href="https://github.com/biaov/effects/blob/main/LICENSE"><img src="https://img.shields.io/github/license/biaov/effects.svg" alt="license" /></a>
 </h2>
 
+## 特性
+
+- 支持 PC 和 H5 浏览
+
 ## 特效列表
 
 - [倒计时](http://effects.biaov.cn/pools/count-down)
@@ -17,6 +21,7 @@
 - [爱心跳动](http://effects.biaov.cn/pools/heart-beat)
 - [光速射线](http://effects.biaov.cn/pools/ray-light)
 - [代码流动](http://effects.biaov.cn/pools/code-flow)
+- [电池充电](http://effects.biaov.cn/pools/battery-charge)
 
 ## 技术栈
 
