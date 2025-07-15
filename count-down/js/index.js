@@ -14,9 +14,10 @@
 
     var left, d, h, m, s, positions
 
-    init(this, options)
+    init(this)
 
     positions = this.find('.position')
+    const that = this
     ;(function tick() {
       left = Math.floor((options.timestamp - new Date()) / 1000)
 
@@ -26,6 +27,19 @@
 
       d = Math.floor(left / days)
       updateDuo(0, 1, d)
+      const $prepend = $(that).find('.placeholder-parent .placeholder')
+      if (d > 99) {
+        const dd = ~~(d / 100)
+        if ($prepend.length) {
+          $prepend.html(dd)
+        } else {
+          $(that).prepend(`<span class="placeholder-parent"><span class="placeholder">${dd}</span></span>`)
+        }
+      } else {
+        $prepend && $prepend.parent().remove()
+      }
+
+      d > 99 && $(that).find('.placeholder-parent')
       left -= d * days
 
       h = Math.floor(left / hours)
@@ -52,7 +66,7 @@
     return this
   }
 
-  function init(elem, options) {
+  function init(elem) {
     elem.addClass('countdown-holder')
 
     $.each(['Days', 'Hours', 'Minutes', 'Seconds'], function (i) {
@@ -71,11 +85,6 @@
         elem.append('<span class="count-div count-div' + i + '"></span>')
       }
     })
-    let diff = ~~((options.timestamp - new Date()) / 1000)
-    diff < 0 && (diff = 0)
-    if (~~(diff / days) > 99) {
-      $(elem).prepend(`<span class="placeholder-parent"><span class="placeholder">1</span></span>`)
-    }
   }
 
   function switchDigit(position, number) {
