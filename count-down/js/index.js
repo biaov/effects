@@ -2,7 +2,7 @@
   var days = 24 * 60 * 60,
     hours = 60 * 60,
     minutes = 60
-
+  let timer
   $.fn.countdown = function (prop) {
     var options = $.extend(
       {
@@ -55,7 +55,8 @@
 
       options.callback(d, h, m, s)
 
-      setTimeout(tick, 1000)
+      clearTimeout(timer)
+      timer = setTimeout(tick, 1000)
     })()
 
     function updateDuo(minor, major, value) {
