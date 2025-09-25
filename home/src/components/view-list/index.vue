@@ -17,8 +17,8 @@ const { listData, onNavTo } = useViewList()
     </view>
     <div class="container">
       <div v-for="(item, index) in listData" :key="index" class="item" @click="onNavTo(item)">
-        <div class="img w-fill">
-          <img :src="item.coverUrl" mode="cover" class="w-fill h-fill" />
+        <div class="img w-full">
+          <img :src="item.coverUrl" mode="cover" class="w-full h-full" />
         </div>
         <div class="text">
           <div class="title">{{ item.title }}</div>
