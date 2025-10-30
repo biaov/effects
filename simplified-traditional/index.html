@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-  <title>繁简体转换</title>
+  <title>在线繁简体转换器</title>
   <meta name="keywords" content="繁简体转换" />
   <meta name="description" content="繁简体转换" />
   <link rel="stylesheet" href="./css/index.css">
@@ -14,11 +14,14 @@
 
 <body>
   <div class="simplified-traditional">
-    <h1 class="title">在线繁体字转换器</h1>
+    <h1 class="title">在线繁简体转换器</h1>
     <textarea placeholder="请输入要转换的文本" class="textarea"></textarea>
+    <div class="tips"></div>
     <div class="buttons">
-      <div class="btn">繁体转简体</div>
-      <div class="btn">简体转繁体</div>
+      <div class="btn" data-type="simplified">繁体转简体</div>
+      <div class="btn" data-type="traditional">简体转繁体</div>
+      <div class="btn" data-type="copy">复制</div>
+      <div class="btn danger" data-type="clear">清空</div>
     </div>
   </div>
   <script type="module" src="./js/index.js"></script>

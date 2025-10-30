@@ -3,12 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: #f5f5f5;
+}
 .simplified-traditional {
-  --theme-color: #f60;
+  --theme-color: #008dff;
+  --success-color: #52c41a;
+  --error-color: #ff4040;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding-top: 20px;
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -24,33 +32,46 @@
 }
 .simplified-traditional .textarea {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 50vw;
   max-height: 400px;
-  max-width: 1200px;
   padding: 15px;
   border: 1px solid #ccc;
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 4px;
 }
 .simplified-traditional .textarea:focus {
   border-color: var(--theme-color);
 }
+.simplified-traditional .tips {
+  width: 100%;
+  height: 40px;
+}
+.simplified-traditional .tips.error {
+  color: var(--error-color);
+}
+.simplified-traditional .tips.success {
+  color: var(--success-color);
+}
 .simplified-traditional .buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .simplified-traditional .buttons .btn {
   padding: 4px 10px;
   border: 1px solid #ccc;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.4s;
   border-radius: 4px;
   user-select: none;
 }
 .simplified-traditional .buttons .btn:hover {
   border-color: var(--theme-color);
   background: rgba(0, 0, 0, 0.02);
+}
+.simplified-traditional .buttons .btn.danger:hover {
+  border-color: var(--error-color);
 }
