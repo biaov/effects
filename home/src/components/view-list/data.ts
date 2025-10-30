@@ -55,5 +55,11 @@ export const viewListData = [
     tags: ['Vue', 'TypeScript', 'Less'],
     createDate: '2025-01-21',
     link: 'battery-charge'
+  },
+  {
+    title: '在线繁简体转换器',
+    tags: ['HTML5', 'CSS3', 'JavaScript'],
+    createDate: '2025-10-30',
+    link: 'simplified-traditional'
   }
-]
+].reverse()
