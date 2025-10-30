@@ -27,7 +27,7 @@ body {
 }
 @media (max-width: 768px) {
   .simplified-traditional .title {
-    font-size: 30px;
+    font-size: 9vw;
   }
 }
 .simplified-traditional .textarea {
