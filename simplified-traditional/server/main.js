@@ -29,17 +29,6 @@ const main = data => {
     ['十', '拾']
   ]
 
-  let min = 0
-  let max = 0
-  const minAndMax = value => {
-    !min && (min = value)
-    !max && (max = value)
-    min = Math.min(min, value)
-    max = Math.max(max, value)
-  }
-  item.forEach(item => {
-    item.forEach(txt => minAndMax(txt.charCodeAt(0)))
-  })
   const addFn = liElems => {
     for (const el of liElems) {
       const jianti = el.querySelector('.jianti').textContent.trim()
@@ -48,9 +37,12 @@ const main = data => {
         .textContent.trim()
         .split(',')
         .map(txt => txt.trim())
+      switch (jianti) {
+        case '说':
+          item.push([jianti, [fanti, '說']])
+          return
+      }
 
-      minAndMax(jianti.charCodeAt(0))
-      fanti.map(txt => minAndMax(txt.charCodeAt(0)))
       item.push([jianti, fanti.length === 1 ? fanti[0] : fanti])
     }
   }
