@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.simplified-traditional {
+  --theme-color: #f60;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.simplified-traditional .title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .simplified-traditional .title {
+    font-size: 30px;
+  }
+}
+.simplified-traditional .textarea {
+  display: block;
+  width: 80%;
+  height: 50vw;
+  max-height: 400px;
+  max-width: 1200px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.simplified-traditional .textarea:focus {
+  border-color: var(--theme-color);
+}
+.simplified-traditional .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.simplified-traditional .buttons .btn {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+  user-select: none;
+}
+.simplified-traditional .buttons .btn:hover {
+  border-color: var(--theme-color);
+  background: rgba(0, 0, 0, 0.02);
+}
