@@ -23,6 +23,11 @@
 - [代码流动](http://effects.biaov.cn/pools/code-flow)
 - [电池充电](http://effects.biaov.cn/pools/battery-charge)
 
+## 工具列表
+
+- [繁简体转换](http://effects.biaov.cn/tools/simplified-traditional)
+- [二维码生成解析器](http://effects.biaov.cn/tools/qrcode)
+
 ## 技术栈
 
 - `HTML5` + `CSS3` + `JavaScript` + `jQuery` + `Vite` + `Vue3.x` + `TypeScript`
@@ -30,11 +35,15 @@
 ## 目录解析
 
 ```MD
-├── effects -------------------- 项目名称
-│   ├── count-down ------------- 倒计时
-│   ├── .gitignore ------------- Git 忽略文件
-│   ├── LICENSE ---------------- 授权信息
-└   └── README.md -------------- 项目文档
+├── effects ------------------------------ 项目名称
+│    ├── error ---------------------------
+│    │    └── index.html ----------------- 错误页面
+│    ├── home ---------------------------- 首页
+│    ├── pools --------------------------- 特效池
+│    ├── tools --------------------------- 工具池
+│    ├── .gitignore ---------------------- Git 忽略文件
+│    ├── LICENSE ------------------------- 授权信息
+└    └── README.md ----------------------- 项目文档
 ```
 
 ## 贡献者们
