@@ -8,38 +8,18 @@ body {
   min-height: 100vh;
   background: #f5f5f5;
 }
-
+a,
+a:hover,
 img {
   display: block;
-  @modes: contain, cover, fill;
-
-  each(@modes, {
-    &[mode='@{value}'] {
-      object-fit: @value;
-    }
-  });
 }
 
-@rect: {
-  fill: 100%;
-};
-
-each(@rect, {
-  .w-@{key} {
-    width: @value;
-  }
-
-  .h-@{key} {
-    height: @value;
-  }
-});
-
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 6px;
   background: lighten(#409eff, 20%);
 }

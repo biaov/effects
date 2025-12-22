@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ViewListGroup from '@/components/view-list-group/index.vue'
+import MenuList from '@/components/menu-list/index.vue'
 
 const qrcodeList = [
   {
@@ -11,6 +12,7 @@ const qrcodeList = [
 
 <template>
   <view-list-group />
+  <menu-list />
   <!-- 底部信息 -->
   <footer class="py-20 bg-white text-center text-info text-xs flex flex-col items-center gap-12">
     <div class="flex justify-center items-center">

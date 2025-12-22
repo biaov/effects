@@ -6,7 +6,7 @@
   <div class="container">
     <div v-for="(subItem, subIndex) in item.items" :key="subIndex" class="item" @click="onClickItem(subItem)">
       <div class="img w-full">
-        <img :src="subItem.coverUrl" mode="cover" class="w-full h-full" />
+        <img :src="subItem.coverUrl" class="w-full h-full object-cover" />
       </div>
       <div class="text">
         <div class="title">{{ subItem.title }}</div>
