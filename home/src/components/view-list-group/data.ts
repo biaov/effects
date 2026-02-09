@@ -62,5 +62,10 @@ export const toolsListData = [
     title: '二维码生成/解析器',
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     link: 'qrcode'
+  },
+  {
+    title: '代码压缩工具',
+    tags: ['HTML5', 'CSS3', 'JavaScript'],
+    link: 'compress'
   }
 ].reverse()
