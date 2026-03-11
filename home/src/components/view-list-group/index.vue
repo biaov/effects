@@ -12,12 +12,30 @@ const { listData, onNavTo } = useViewList()
 </script>
 
 <style scoped lang="less">
+@size: 48px;
 .wrap {
   position: relative;
   z-index: 2;
-  max-width: 1240px;
+  padding: calc(@size / 2);
+  max-width: calc(1616px + @size);
   width: 100%;
-  padding: 20px;
   margin: 0 auto;
+}
+@media (max-width: 1920px) {
+  .wrap {
+    max-width: calc(1206px + @size);
+  }
+}
+
+@media (max-width: 1600px) {
+  .wrap {
+    max-width: calc(796px + @size);
+  }
+}
+
+@media (max-width: 860px) {
+  .wrap {
+    max-width: calc(386px + @size);
+  }
 }
 </style>

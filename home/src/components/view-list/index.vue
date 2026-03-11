@@ -3,7 +3,7 @@
     <div class="title">{{ item.title }}</div>
     <a target="_blank" :href="item.link" title="访问源码"><img src="@/assets/github.svg" alt="github" class="github" /></a>
   </view>
-  <div class="container">
+  <div class="main">
     <div v-for="(subItem, subIndex) in item.items" :key="subIndex" class="item" @click="onClickItem(subItem)">
       <div class="img w-full">
         <img :src="subItem.coverUrl" class="w-full h-full object-cover" />
@@ -66,20 +66,20 @@ const onClickItem = (item: ListItem) => {
   }
 }
 
-.container {
+.main {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 20px;
+  gap: 24px;
+  margin-bottom: 24px;
 
   .item {
     width: 386px;
-    margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: #fff;
     transition: all 0.3s ease;
-    animation: floating ease-in-out 1.6s infinite alternate;
+    // animation: floating ease-in-out 1.6s infinite alternate;
     cursor: pointer;
 
     &:hover {
@@ -128,7 +128,7 @@ const onClickItem = (item: ListItem) => {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 769px) {
   .container {
     .item {
       width: 100%;
