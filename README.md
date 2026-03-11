@@ -28,6 +28,7 @@
 - [繁简体转换](http://effects.biaov.cn/tools/simplified-traditional)
 - [二维码生成解析器](http://effects.biaov.cn/tools/qrcode)
 - [代码压缩工具](http://effects.biaov.cn/tools/compress)
+- [本地音乐播放器](http://effects.biaov.cn/tools/ai-music)
 
 ## 技术栈
 

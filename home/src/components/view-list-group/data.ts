@@ -67,5 +67,10 @@ export const toolsListData = [
     title: '代码压缩工具',
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     link: 'compress'
+  },
+  {
+    title: '本地音乐播放器',
+    tags: ['AI', 'React', 'TypeScript'],
+    link: 'ai-music'
   }
 ].reverse()
